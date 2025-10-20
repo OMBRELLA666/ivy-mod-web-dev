@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Local Cow Plant Kitchen — Home</title>
+  <!-- base site styles (same as your menu page) -->
+  <link rel="stylesheet" href="styles.css" />
+  <!-- homepage-specific overrides (new) -->
+  <link rel="stylesheet" href="home.css" />
+</head>
+<body class="home-dark">
+  <!-- Top Header Bar (identical to menu page) -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="logo" href="#">
+        <span class="mark" aria-hidden="true">🌿</span>
+        <span class="wordmark">Local Cow Plant Kitchen</span>
+      </a>
+
+       <nav class="main-nav" aria-label="Primary">
+        <a href="home.html">Home</a>
+        <a href="index.html">Menu</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+        <a href="locations.html">Locations</a>
+        <a href="#">Catering & Events</a>
+        <a href="#">Our Story</a>
+      </nav>
+
+      <div class="actions">
+        <a class="btn btn-dark" href="#"><span class="icon">✈</span> Ship a Pie</a>
+        <a class="btn btn-danger" href="menu.html">Order</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO: Big headline + brush badge -->
+  <section class="hero-splash container">
+    <div class="hero-copy">
+      <h1><span class="small">Geoffano’s-style energy,</span><br>Rustik Cow <em>Plant</em> Pizzeria</h1>
+      <p class="sub">100% Vegan • Gluten-Free • No Seed Oils • Stone-Baked</p>
+      <div class="cta-row">
+        <a class="btn btn-danger btn-lg" href="menu.html">Start Order</a>
+        <a class="btn btn-outline" href="#">Find a Location</a>
+      </div>
+    </div>
+    <div class="hero-art" aria-hidden="true"></div>
+  </section>
+
+  <!-- Brush banner like the reference -->
+  <section class="brush-banner">
+    <div class="container">
+      <span class="brush">Everyday Specials</span>
+    </div>
+  </section>
+
+  <!-- Specials grid styled like the image (red frames, bold prices) -->
+  <section class="container specials-grid">
+    <article class="deal">
+      <h3>Large Margherita (GF) <br>& 20 Cauli Bites</h3>
+      <p class="price">$44.95</p>
+    </article>
+
+    <article class="deal">
+      <h3>Large “Umami Supreme” (GF)<br>& 20 Cauli Bites</h3>
+      <p class="price">$52.95</p>
+    </article>
+
+    <article class="deal">
+      <h3>Sheet Pan Margherita (GF)<br>& 50 Cauli Bites</h3>
+      <p class="price">$84.95</p>
+    </article>
+
+    <article class="deal">
+      <h3>Large Thin-Plant (GF) <br>& 10 Crispy Tofu Fingers</h3>
+      <p class="price">$42.99</p>
+    </article>
+  </section>
+
+  <!-- Big “Tuesdays” band -->
+  <section class="tuesday-band">
+    <div class="container tuesday-inner">
+      <h4>Tuesdays</h4>
+      <h2>Pizza Night • $19.95</h2>
+      <p>11am – 9pm</p>
+      <p class="contact"><span class="phone">📞</span> 718-937-0500 • <a href="#">www.rustikcowkitchen.com</a></p>
+    </div>
+  </section>
+
+<!-- ===== Spin The Wheel (Email for a chance to win) ===== -->
+<section class="container lcwheel" id="spin-wheel" aria-label="Spin the wheel promo">
+  <div class="lcwheel-wrap">
+    <header class="lcwheel-head">
+      <h2>Spin for a chance to win a Free Pizza</h2>
+      <p>Enter your email to play. One spin per device.</p>
+    </header>
+
+    <form class="lcwheel-form" id="wheelForm" novalidate>
+      <label for="wheelEmail" class="sr-only">Email Address</label>
+      <input type="email" id="wheelEmail" name="email" placeholder="you@example.com" required />
+      <button class="btn btn-danger" id="wheelSpinBtn" type="submit" disabled>Spin</button>
+    </form>
+
+    <div class="lcwheel-stage">
+      <!-- Needle -->
+      <div class="lcwheel-needle" aria-hidden="true"></div>
+
+      <!-- Wheel -->
+      <div class="lcwheel-disc" id="wheelDisc" role="img" aria-label="Prize wheel">
+        <!-- 12 segments; adjust labels as you like -->
+        <svg viewBox="0 0 100 100" class="lcwheel-svg">
+          <defs>
+            <linearGradient id="segRed" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#b8191e"/><stop offset="1" stop-color="#8f0f13"/>
+            </linearGradient>
+            <linearGradient id="segGold" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#f0b209"/><stop offset="1" stop-color="#c69006"/>
+            </linearGradient>
+            <linearGradient id="segDark" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#222"/><stop offset="1" stop-color="#333"/>
+            </linearGradient>
+          </defs>
+
+          <!-- Draw 12 slices -->
+          <g class="slices" transform="translate(50,50)">
+            <!-- We alternate colors for contrast -->
+            <!-- Slice template: path arc 30° each -->
+            <!-- Generated manually; labels positioned at radius 32 -->
+            <!-- 0 -->
+            <path d="M0,0 L50,0 A50,50 0 0,1 43.3,25 Z" fill="url(#segRed)"/>
+            <!-- 30 -->
+            <path d="M0,0 L43.3,25 A50,50 0 0,1 25,43.3 Z" fill="url(#segGold)"/>
+            <!-- 60 -->
+            <path d="M0,0 L25,43.3 A50,50 0 0,1 0,50 Z" fill="url(#segDark)"/>
+            <!-- 90 -->
+            <path d="M0,0 L0,50 A50,50 0 0,1 -25,43.3 Z" fill="url(#segRed)"/>
+            <!-- 120 -->
+            <path d="M0,0 L-25,43.3 A50,50 0 0,1 -43.3,25 Z" fill="url(#segGold)"/>
+            <!-- 150 -->
+            <path d="M0,0 L-43.3,25 A50,50 0 0,1 -50,0 Z" fill="url(#segDark)"/>
+            <!-- 180 -->
+            <path d="M0,0 L-50,0 A50,50 0 0,1 -43.3,-25 Z" fill="url(#segRed)"/>
+            <!-- 210 -->
+            <path d="M0,0 L-43.3,-25 A50,50 0 0,1 -25,-43.3 Z" fill="url(#segGold)"/>
+            <!-- 240 -->
+            <path d="M0,0 L-25,-43.3 A50,50 0 0,1 0,-50 Z" fill="url(#segDark)"/>
+            <!-- 270 -->
+            <path d="M0,0 L0,-50 A50,50 0 0,1 25,-43.3 Z" fill="url(#segRed)"/>
+            <!-- 300 -->
+            <path d="M0,0 L25,-43.3 A50,50 0 0,1 43.3,-25 Z" fill="url(#segGold)"/>
+            <!-- 330 -->
+            <path d="M0,0 L43.3,-25 A50,50 0 0,1 50,0 Z" fill="url(#segDark)"/>
+          </g>
+
+          <!-- Labels -->
+          <g class="labels" transform="translate(50,50)" font-size="4" font-weight="700" text-anchor="middle" fill="#fff">
+            <text transform="rotate(15) translate(32,0) rotate(-15)">Free Pizza</text>
+            <text transform="rotate(45) translate(32,0) rotate(-45)">$5 Off</text>
+            <text transform="rotate(75) translate(32,0) rotate(-75)">Free Drink</text>
+            <text transform="rotate(105) translate(32,0) rotate(-105)">Try Again</text>
+            <text transform="rotate(135) translate(32,0) rotate(-135)">10% Off</text>
+            <text transform="rotate(165) translate(32,0) rotate(-165)">Free Topping</text>
+            <text transform="rotate(195) translate(32,0) rotate(-195)">Try Again</text>
+            <text transform="rotate(225) translate(32,0) rotate(-225)">Free Dessert</text>
+            <text transform="rotate(255) translate(32,0) rotate(-255)">$5 Off</text>
+            <text transform="rotate(285) translate(32,0) rotate(-285)">Try Again</text>
+            <text transform="rotate(315) translate(32,0) rotate(-315)">10% Off</text>
+            <text transform="rotate(345) translate(32,0) rotate(-345)">Free Pizza</text>
+          </g>
+
+          <!-- Center cap -->
+          <circle cx="50" cy="50" r="7" fill="#111" stroke="#f0b209" stroke-width="2"/>
+        </svg>
+      </div>
+    </div>
+
+    <p class="lcwheel-result" id="wheelResult" aria-live="polite"></p>
+    <p class="lcwheel-legal">One spin per device. Prizes valid in-store. 100% vegan • gluten-free • no seed oils.</p>
+  </div>
+</section>
+<script>
+/* ===== Lightweight wheel logic (no libs) ===== */
+(() => {
+  const disc = document.getElementById('wheelDisc');
+  const form = document.getElementById('wheelForm');
+  const email = document.getElementById('wheelEmail');
+  const spinBtn = document.getElementById('wheelSpinBtn');
+  const result = document.getElementById('wheelResult');
+
+  // Prevent multiple spins per device
+  const playedKey = 'lcwheel_played';
+  const prizeKey = 'lcwheel_prize';
+  if(localStorage.getItem(playedKey)){
+    spinBtn.disabled = true;
+    const prior = localStorage.getItem(prizeKey);
+    if(prior) result.textContent = 'You already played: ' + prior;
+  }
+
+  // Enable button when email valid
+  const validEmail = v => /\S+@\S+\.\S+/.test(v);
+  email.addEventListener('input', () => {
+    spinBtn.disabled = !validEmail(email.value);
+  });
+
+  // Prize segments (12, clockwise from 0° at needle)
+  const prizes = [
+    'Free Pizza', '$5 Off', 'Free Drink', 'Try Again',
+    '10% Off', 'Free Topping', 'Try Again', 'Free Dessert',
+    '$5 Off', 'Try Again', '10% Off', 'Free Pizza'
+  ];
+
+  // Optional: weight outcomes (smaller chance for Free Pizza)
+  // Map each index to a weight (higher = more likely)
+  const weights = [1,3,2,6,3,2,6,2,3,6,3,1];
+
+  function weightedRandomIndex(ws){
+    const sum = ws.reduce((a,b)=>a+b,0);
+    let r = Math.random()*sum;
+    for(let i=0;i<ws.length;i++){ if((r-=ws[i])<0) return i; }
+    return ws.length-1;
+  }
+
+  // Submit/Spin
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    if(localStorage.getItem(playedKey)) return;
+
+    // Hook: send email to your backend (replace with fetch to Formspree/Netlify/etc.)
+    // fetch('/api/subscribe', { method:'POST', headers:{'Content-Type':'application/json'}, body: JSON.stringify({ email: email.value }) });
+
+    // Choose a prize index and compute target angle
+    const idx = weightedRandomIndex(weights);      // 0..11
+    const sliceAngle = 360 / prizes.length;        // 30°
+    // The wheel rotates; needle stays at 0°. We want the chosen slice centered at top.
+    // Center of slice k is at k*30 + 15 degrees. We rotate NEGATIVE to bring that under the needle.
+    const target = -(idx * sliceAngle + sliceAngle/2);
+
+    // Add extra rotations for drama (3 to 5 spins)
+    const extra = -(360 * (3 + Math.floor(Math.random()*3)));
+
+    const finalAngle = extra + target;
+
+    // Animate
+    disc.style.transition = 'transform 3.2s cubic-bezier(.15,.9,.1,1)';
+    disc.style.transform = `rotate(${finalAngle}deg)`;
+
+    // Lock state and announce after animation
+    spinBtn.disabled = true;
+    setTimeout(() => {
+      const prize = prizes[idx];
+      result.textContent = `Result: ${prize}`;
+      localStorage.setItem(playedKey, '1');
+      localStorage.setItem(prizeKey, prize);
+    }, 3300);
+  });
+})();
+</script>
+  <!-- Footer (identical to menu page) -->
+  <footer class="site-footer">
+    <div class="container">
+      © 2025 Rustik Cow Plant Kitchen • Ingredients & Allergen Info • Careers
+    </div>
+  </footer>
+</body>
+</html>

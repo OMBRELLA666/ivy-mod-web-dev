@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contact — Local Cow Plant Kitchen</title>
+  <link rel="stylesheet" href="styles2.css" />
+</head>
+<body class="contact-page">
+  <!-- HEADER (same as menu page) -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a class="logo" href="home.html">
+            <img src="local_cow_logo.png" alt="Local Cow Plant Kitchen logo" class="logo-img">
+            <span class="wordmark">Local Cow Plant Kitchen</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <a href="home.html">Home</a>
+        <a href="index.html">Menu</a>
+        <a href="contact.html" aria-current="page">Contact</a>
+        <a href="locations.html">Locations</a>
+      </nav>
+
+      <div class="actions">
+        <a class="btn btn-dark" href="order.html"><span class="icon">✈</span> Ship a Pie</a>
+        <a class="btn btn-danger" href="index.html">Order</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- BODY -->
+  <main class="container contact-layout">
+    <section class="contact-intro">
+      <h1>Contact Us</h1>
+      <p>
+        At <strong>Rustik Cow Plant Kitchen</strong>, we serve handcrafted vegan comfort food made entirely
+        without gluten or seed oils — featuring stone-baked pizzas, plant-based cheeses,
+        wholesome bowls, and flavorful sides. Whether you’re craving a fresh margherita
+        on sourdough or a truffle-mushroom flatbread, our mission is to bring mindful,
+        sustainable meals to your table.
+      </p>
+    </section>
+
+    <section class="contact-form-area">
+      <form class="contact-form" action="#" method="post">
+        <div class="form-row">
+          <label for="name">Name (optional)</label>
+          <input type="text" id="name" name="name" placeholder="Your name" />
+        </div>
+        <div class="form-row">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+        </div>
+        <div class="form-row">
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" placeholder="(555) 555-5555" required />
+        </div>
+        <div class="form-row">
+          <label for="message">Your Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Write your message..." required></textarea>
+        </div>
+        <div class="form-actions">
+          <button class="btn btn-danger" type="submit">Send Message</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      © 2025 Local Cow Plant Kitchen • Ingredients & Allergen Info • Careers
+    </div>
+  </footer>
+</body>
+</html>

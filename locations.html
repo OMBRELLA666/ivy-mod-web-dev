@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Locations — Local Cow Plant Kitchen</title>
+  <!-- Base site styles (same file you already use site-wide) -->
+  <link rel="stylesheet" href="styles2.css" />
+</head>
+<body class="locations-page">
+
+  <!-- HEADER (same markup as menu page) -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+        <a class="logo" href="home.html">
+            <img src="local_cow_logo.png" alt="Local Cow Plant Kitchen logo" class="logo-img">
+            <span class="wordmark">Local Cow Plant Kitchen</span>
+        </a>
+
+      <nav class="main-nav" aria-label="Primary">
+        <a href="home.html">Home</a>
+        <a href="index.html">Menu</a>
+        <a href="locations.html" aria-current="page">Locations</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="actions">
+        <a class="btn btn-dark" href="order.html"><span class="icon">✈</span> Ship a Pie</a>
+        <a class="btn btn-danger" href="index.html">Order</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- STEP BAR (kept for consistency with the menu page) -->
+  <nav class="stepbar" aria-label="Order steps">
+    <div class="container steps">
+      <a class="step active" aria-current="page">Locations</a>
+      <a class="step" href="menu.html">Menu</a>
+      <a class="step" href="#">Review & Payment</a>
+      <a class="step" href="#">Confirmation</a>
+    </div>
+  </nav>
+
+  <!-- PAGE INTRO -->
+  <section class="container loc-hero">
+    <h1>Find Local Cow Plant Kitchen</h1>
+    <p>100% vegan • gluten-free • no seed oils. Choose a map to open directions in Google Maps.</p>
+  </section>
+
+  <!-- MAP STACK -->
+  <main class="container map-stack" aria-label="Restaurant locations">
+
+    <!-- Map 1 -->
+    <article class="map-card">
+      <header class="map-head">
+        <h2>Downtown</h2>
+        <p>Open daily • Stone-baked pizzas, bowls, and kombucha</p>
+      </header>
+
+      <!-- Clickable overlay opens Google Maps in new tab -->
+      <a class="map-link" href="https://www.google.com/maps?q=40.712776,-74.005974" target="_blank" rel="noopener noreferrer" aria-label="Open Downtown location in Google Maps"></a>
+
+      <!-- Embedded map (still clickable thanks to overlay link) -->
+      <iframe
+        title="Downtown map"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=40.712776,-74.005974&z=13&output=embed">
+      </iframe>
+
+      <footer class="map-foot">
+        <span>123 Greenway Ave • Suite A</span>
+        <span>Daily 11a – 9p</span>
+      </footer>
+    </article>
+
+    <!-- Map 2 -->
+    <article class="map-card">
+      <header class="map-head">
+        <h2>Riverside</h2>
+        <p>Weekend pizza night • Patio seating</p>
+      </header>
+
+      <a class="map-link" href="https://www.google.com/maps?q=41.878113,-87.629799" target="_blank" rel="noopener noreferrer" aria-label="Open Riverside location in Google Maps"></a>
+
+      <iframe
+        title="Riverside map"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=41.878113,-87.629799&z=13&output=embed">
+      </iframe>
+
+      <footer class="map-foot">
+        <span>455 River St • Building 2</span>
+        <span>Fri–Sun 12p – 10p</span>
+      </footer>
+    </article>
+
+    <!-- Map 3 -->
+    <article class="map-card">
+      <header class="map-head">
+        <h2>Hillside</h2>
+        <p>Grab-and-go window • Lunch specials</p>
+      </header>
+
+      <a class="map-link" href="https://www.google.com/maps?q=34.052235,-118.243683" target="_blank" rel="noopener noreferrer" aria-label="Open Hillside location in Google Maps"></a>
+
+      <iframe
+        title="Hillside map"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        src="https://www.google.com/maps?q=34.052235,-118.243683&z=13&output=embed">
+      </iframe>
+
+      <footer class="map-foot">
+        <span>79 Vista Blvd • Kiosk C</span>
+        <span>Mon–Sat 11a – 8p</span>
+      </footer>
+    </article>
+
+  </main>
+
+  <!-- FOOTER (same as menu page) -->
+  <footer class="site-footer">
+    <div class="container">
+      © 2025 Local Cow Plant Kitchen • Ingredients & Allergen Info • Careers
+    </div>
+  </footer>
+</body>
+</html>
